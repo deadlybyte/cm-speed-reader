@@ -1,3 +1,7 @@
 .CM-weather-forecast {
   text-transform: capitalize;
 }
+
+.CM-overlay .CM-weather-forecast span {
+  padding: 0;
+}
