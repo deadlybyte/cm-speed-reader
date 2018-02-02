@@ -7,7 +7,10 @@ const Weather = (props) => {
   return (
     <span className="CM-weather-forecast">
       Weather - {forecast ? forecast : 'Unknown'}
-      <span dangerouslySetInnerHTML={{ __html: temperature !== undefined ? `, ${temperature}&deg;C` : '' }}></span>
+      {
+        temperature &&
+        <span>, {temperature}&deg;C</span>
+      }
     </span>
   );
 };

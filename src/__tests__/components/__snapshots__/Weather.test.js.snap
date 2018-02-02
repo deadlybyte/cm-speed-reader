@@ -6,13 +6,6 @@ exports[`Weather render should render Unknown forecast 1`] = `
 >
   Weather - 
   Unknown
-  <span
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
 </span>
 `;
 
@@ -22,13 +15,6 @@ exports[`Weather render should render the forecast 1`] = `
 >
   Weather - 
   Gusty, Drizzle
-  <span
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
 </span>
 `;
 
@@ -38,12 +24,10 @@ exports[`Weather render should render the forecast and temperature 1`] = `
 >
   Weather - 
   Gusty, Drizzle
-  <span
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": ", 10&deg;C",
-      }
-    }
-  />
+  <span>
+    , 
+    10
+    °C
+  </span>
 </span>
 `;

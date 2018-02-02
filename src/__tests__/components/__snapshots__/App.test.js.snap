@@ -151,13 +151,11 @@ exports[`App render should render as expected 1`] = `
           >
             Weather - 
             Gusty, Drizzle
-            <span
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": ", 10&deg;C",
-                }
-              }
-            />
+            <span>
+              , 
+              10
+              °C
+            </span>
           </span>
         </div>
       </div>
