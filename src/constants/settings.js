@@ -1,4 +1,4 @@
 export const ADJUST_COMMENTARY_SPEED = 'settings/ADJUST_COMMENTARY_SPEED';
-export const REST_COMMENTARY = 'settings/REST_COMMENTARY';
+export const RESET_COMMENTARY = 'settings/RESET_COMMENTARY';
 export const PLAY_COMMENTARY_TOGGLE = 'settings/PLAY_COMMENTARY_TOGGLE';
 export const MUTE_TOGGLE = 'settings/MUTE_TOGGLE';

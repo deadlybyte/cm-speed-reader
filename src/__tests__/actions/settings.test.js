@@ -1,5 +1,5 @@
-import { adjustCommentarySpeed, muteToggle, playToggle } from '../../actions/settings';
-import { ADJUST_COMMENTARY_SPEED, PLAY_COMMENTARY_TOGGLE, MUTE_TOGGLE } from '../../constants/settings';
+import { adjustCommentarySpeed, muteToggle, playToggle, resetCommentary } from '../../actions/settings';
+import { ADJUST_COMMENTARY_SPEED, MUTE_TOGGLE, PLAY_COMMENTARY_TOGGLE, RESET_COMMENTARY } from '../../constants/settings';
 
 describe('actions', () => {
   describe('settings', () => {
@@ -26,6 +26,14 @@ describe('actions', () => {
       };
 
       expect(playToggle()).toEqual(expectedAction);
+    });
+
+    it('should create an action to reset the commentary', () => {
+      const expectedAction = {
+        type: RESET_COMMENTARY
+      };
+
+      expect(resetCommentary()).toEqual(expectedAction);
     });
   });
 });

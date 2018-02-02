@@ -1,9 +1,15 @@
-import { ADJUST_COMMENTARY_SPEED, PLAY_COMMENTARY_TOGGLE, MUTE_TOGGLE } from '../constants/settings';
+import { ADJUST_COMMENTARY_SPEED, PLAY_COMMENTARY_TOGGLE, MUTE_TOGGLE, RESET_COMMENTARY } from '../constants/settings';
 
 export const adjustCommentarySpeed = (speed) => {
   return {
     type: ADJUST_COMMENTARY_SPEED,
     speed
+  };
+};
+
+export const muteToggle = () => {
+  return {
+    type: MUTE_TOGGLE
   };
 };
 
@@ -13,8 +19,8 @@ export const playToggle = () => {
   };
 }
 
-export const muteToggle = () => {
+export const resetCommentary = () => {
   return {
-    type: MUTE_TOGGLE
+    type: RESET_COMMENTARY
   };
-};
+}

@@ -1,5 +1,5 @@
 import settings from '../../reducers/settings';
-import { ADJUST_COMMENTARY_SPEED, MUTE_TOGGLE, PLAY_COMMENTARY_TOGGLE } from '../../constants/settings';
+import { ADJUST_COMMENTARY_SPEED, MUTE_TOGGLE, PLAY_COMMENTARY_TOGGLE, RESET_COMMENTARY } from '../../constants/settings';
 
 describe('reducers', () => {
   describe('settings', () => {
@@ -7,6 +7,7 @@ describe('reducers', () => {
       expect(settings(undefined, {})).toEqual({
         isMuted: true,
         isPlaying: true,
+        reset: 0,
         speed: 1,
       });
     });
@@ -16,12 +17,14 @@ describe('reducers', () => {
         const initialState = {
           isMuted: true,
           isPlaying: true,
+          reset: 0,
           speed: 1
         };
 
         const expectedState = {
           isMuted: false,
           isPlaying: true,
+          reset: 0,
           speed: 1
         };
 
@@ -32,12 +35,14 @@ describe('reducers', () => {
         const initialState = {
           isMuted: false,
           isPlaying: true,
+          reset: 0,
           speed: 1
         };
 
         const expectedState = {
           isMuted: true,
           isPlaying: true,
+          reset: 0,
           speed: 1
         };
 
@@ -50,12 +55,14 @@ describe('reducers', () => {
         const initialState = {
           isMuted: false,
           isPlaying: true,
+          reset: 0,
           speed: 1
         };
 
         const expectedState = {
           isMuted: false,
           isPlaying: true,
+          reset: 0,
           speed: 10
         };
 
@@ -68,12 +75,14 @@ describe('reducers', () => {
         const initialState = {
           isMuted: true,
           isPlaying: true,
+          reset: 0,
           speed: 1
         };
 
         const expectedState = {
           isMuted: true,
           isPlaying: false,
+          reset: 0,
           speed: 1
         };
 
@@ -84,16 +93,38 @@ describe('reducers', () => {
         const initialState = {
           isMuted: true,
           isPlaying: false,
+          reset: 0,
           speed: 1
         };
 
         const expectedState = {
           isMuted: true,
           isPlaying: true,
+          reset: 0,
           speed: 1
         };
 
         expect(settings(initialState, { type: PLAY_COMMENTARY_TOGGLE })).toEqual(expectedState);
+      });
+    });
+
+    describe('RESET_COMMENTARY', () => {
+      it('should reset the commentary', () => {
+        const initialState = {
+          isMuted: false,
+          isPlaying: true,
+          reset: 0,
+          speed: 1
+        };
+
+        const expectedState = {
+          isMuted: false,
+          isPlaying: true,
+          reset: 1,
+          speed: 1
+        };
+
+        expect(settings(initialState, { type: RESET_COMMENTARY })).toEqual(expectedState);
       });
     });
   });
