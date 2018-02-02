@@ -1,0 +1,83 @@
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import CMSpeedReadPlayerContainer from '../containers/CMSpeedReadPlayerContainer';
+import DateDisplay from './DateDisplay';
+import PlayerControlsContainer from '../containers/PlayerControlsContainer';
+import VersionInfo from './VersionInfo';
+import VenueContainer from '../containers/VenueContainer';
+import WeatherContainer from '../containers/WeatherContainer';
+import './App.css';
+import '../media/images/stadium-background.jpeg';
+
+class App extends Component {
+  static defaultProps = {
+    clientIp: undefined,
+    fetchForecast: undefined
+  }
+
+  static propTypes = {
+    clientIp: PropTypes.string,
+    fetchGeoIp: PropTypes.func.isRequired,
+    fetchForecast: PropTypes.func
+  }
+
+  async componentDidMount() {
+    const { fetchGeoIp } = this.props;
+
+    await fetchGeoIp();
+  }
+
+  async componentWillReceiveProps(nextProps) {
+    const { clientIp } = this.props;
+
+    if (nextProps.clientIp && clientIp !== nextProps.clientIp && nextProps.fetchForecast) {
+      await nextProps.fetchForecast();
+    }
+  }
+
+  render() {
+    return (
+      <div className="container-fluid">
+        <header className="App-header CM-block d-flex align-items-center justify-content-center">
+          <h1 className="App-title">Championship Manager Speed Reader</h1>
+        </header>
+        <div className="row no-gutters">
+          <div className="col CM-overlay">
+            <PlayerControlsContainer />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <DateDisplay />
+          </div>
+        </div>
+        <div className="row no-gutters">
+          <div className="col CM-overlay">
+            <div className="CM-match-block">
+              <CMSpeedReadPlayerContainer />
+            </div>
+          </div>
+        </div>
+        <div className="row no-gutters">
+          <div className="col CM-overlay CM-match-metadata">
+            <div className="row">
+              <div className="col col-sm-4">
+                <VersionInfo />
+              </div>
+              <div className="col-sm-4 ml-auto text-md-right">
+                <WeatherContainer />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <VenueContainer />
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default App;

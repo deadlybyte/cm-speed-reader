@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Venue render should render as Unknown venue 1`] = `
+<div
+  className="CM-venue-block"
+>
+  <p>
+    <span>
+      Unknown
+      , 
+      Unknown
+    </span>
+  </p>
+</div>
+`;
+
+exports[`Venue render should render venue from props 1`] = `
+<div
+  className="CM-venue-block"
+>
+  <p>
+    <span>
+      Molineux Stadium
+      , 
+      Wolverhampton
+    </span>
+  </p>
+</div>
+`;
+
+exports[`Venue render should render venue location when only location set and default to Unknown name 1`] = `
+<div
+  className="CM-venue-block"
+>
+  <p>
+    <span>
+      Unknown
+      , 
+      Wolverhampton
+    </span>
+  </p>
+</div>
+`;
+
+exports[`Venue render should render venue name when only name set and default to Unknown location 1`] = `
+<div
+  className="CM-venue-block"
+>
+  <p>
+    <span>
+      Molineux Stadium
+      , 
+      Unknown
+    </span>
+  </p>
+</div>
+`;

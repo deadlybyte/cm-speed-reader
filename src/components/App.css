@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+  background: #18141A url(../media/images/stadium-background.jpeg) no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.App {
+  margin: 10px;
+}
+
+.App-header {
+  background-color: #ff0000;
+  line-height: 60px;
+  margin: 10px 0;
+  min-height: 80px;
+}
+
+.App-header h1 {
+  color: white;
+  font-size: xx-large;
+  letter-spacing: -1px;
+  padding: 0;
+  text-shadow: 3px 4px 5px #ad0000;
+  word-spacing: 6px;
+  word-wrap: break-word;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: xx-large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.CM-overlay {
+  background-color: rgba(24, 20, 16, 0.7);
+  margin: 5px 0 10px;
+}
+
+.CM-overlay div {
+  padding: 5px 10px;
+}
+
+.CM-overlay span {
+  padding: 6px 10px;
+  box-decoration-break: clone;
+}
+
+.CM-match-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 450px;
+}
+
+.CM-block {
+  background-color: red;
+  border: 8px outset rgb(247, 76, 76);
+  padding: 2px;
+  text-align: center;
+}
+
+.CM-block p {
+  margin: 12px;
+  word-wrap: break-word;
+}
+
+.CM-block span {
+  color: white;
+  text-shadow: 2px 1px black;
+}
+
+.CM-commentary-block {
+  background-color: white;
+  border: 2px outset;
+  border-top-color: white;
+  border-left-color: white;
+  border-bottom-color: #adaaa5;
+  border-right-color: #adaaa5;
+  margin: 0 20px;
+}
+
+.CM-commentary-block span {
+  color: #0030a5;
+  text-shadow: 2px 1px #a5bade;
+}
+
+.CM-match-metadata {
+  color: yellow;
+}
+
+.CM-btn {
+  background-color: #210063;
+  border: 1px outset;
+  border-top-color: #31009c;
+  border-left-color: #31009c;
+  border-bottom-color: #100042;
+  border-right-color: #100042;
+  border-radius: 0;
+  color: white;
+}
+
+.CM-btn:hover,
+.CM-btn:focus,
+.CM-btn:active {
+  color: white;
+}

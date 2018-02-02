@@ -1,0 +1,22 @@
+.CM-venue-block {
+  background-color: #848284;
+  border: 3px outset;
+  border-top-color: #ded7d6;
+  border-left-color: #ded7d6;
+  border-bottom-color: #5a5552;
+  border-right-color: #5a5552;
+  padding: 2px;
+  text-align: center;
+  min-height: 40px;
+  margin: 10px 0;
+}
+
+.CM-venue-block span {
+  color: white;
+  font-size: x-large;
+}
+
+.CM-venue-block p {
+  margin: 12px;
+  word-wrap: break-word;
+}

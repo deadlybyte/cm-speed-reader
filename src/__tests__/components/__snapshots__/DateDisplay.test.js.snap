@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateDisplay render should render as expected 1`] = `
+<div
+  className="CM-overlay CM-date"
+>
+  <span>
+    Tuesday 14th February 2017
+  </span>
+</div>
+`;

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CMSpeedReadPlayer render should render as expected 1`] = `
+<div
+  className="CM-block CM-commentary-block"
+>
+  <p
+    className="App-intro"
+  >
+    <span>
+       
+    </span>
+  </p>
+</div>
+`;

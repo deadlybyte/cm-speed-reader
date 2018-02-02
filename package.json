@@ -1,0 +1,49 @@
+{
+  "name": "cm-speed-reader",
+  "description": "Championship Manager inspired speed reader",
+  "author": "Carl Saunders <carl.saunders@deadlybyte.co.uk> (http://www.deadlybyte.co.uk)",
+  "keywords": [
+    "fast reading",
+    "championship manager",
+    "ChampMan",
+    "skim reading",
+    "scan reading",
+    "speed reader",
+    "reading"
+  ],
+  "license": "MIT",
+  "version": "0.1.0",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "classnames": "^2.2.5",
+    "cross-fetch": "^1.1.1",
+    "flow-bin": "^0.64.0",
+    "font-awesome": "^4.7.0",
+    "moment": "^2.20.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-scripts": "1.1.0",
+    "react-speedy-reader": "^1.0.0",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "flow": "flow",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.1.8",
+    "@types/expect": "^1.20.2",
+    "@types/fetch-mock": "^5.12.2",
+    "@types/jest": "^22.1.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "fetch-mock": "^6.0.0",
+    "redux-mock-store": "^1.5.1"
+  }
+}

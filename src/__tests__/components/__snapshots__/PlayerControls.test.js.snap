@@ -1,0 +1,331 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlayerControls render should render as expected 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row justify-content-sm-center no-gutters"
+  >
+    <div
+      className="col-sm-auto col-xs-12"
+    >
+      <button
+        className="CM-btn btn btn-primary btn-block"
+        type="button"
+      >
+        <i
+          className="fa fa-fw fa-w-16 fa-pause-circle"
+          title="Pause"
+        />
+      </button>
+    </div>
+    <div
+      className="col-sm-auto col-xs-12"
+    >
+      <input
+        className="form-control"
+        id="commentary-speed"
+        max={5}
+        min={1}
+        onChange={[Function]}
+        title="Commentary speed - Very slow"
+        type="number"
+        value={1}
+      />
+    </div>
+    <div
+      className="col-sm-auto col-xs-12"
+    >
+      <button
+        className="CM-btn btn btn-primary btn-block"
+        id="muteToggle"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          className="fa fa-fw fa-w-16 fa-volume-up"
+          title="Unmute"
+        />
+      </button>
+    </div>
+    <div
+      className="col-sm-auto col-xs-12"
+    >
+      <button
+        className="CM-btn btn btn-primary btn-block"
+        type="button"
+      >
+        <i
+          className="fa fa-fw fa-w-16 fa-angle-double-left"
+          title="Reset"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PlayerControls render should render mute button when not muted 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row justify-content-sm-center no-gutters"
+  >
+    <div
+      className="col-sm-auto col-xs-12"
+    >
+      <button
+        className="CM-btn btn btn-primary btn-block"
+        type="button"
+      >
+        <i
+          className="fa fa-fw fa-w-16 fa-pause-circle"
+          title="Pause"
+        />
+      </button>
+    </div>
+    <div
+      className="col-sm-auto col-xs-12"
+    >
+      <input
+        className="form-control"
+        id="commentary-speed"
+        max={5}
+        min={1}
+        onChange={[Function]}
+        title="Commentary speed - Very slow"
+        type="number"
+        value={1}
+      />
+    </div>
+    <div
+      className="col-sm-auto col-xs-12"
+    >
+      <button
+        className="CM-btn btn btn-primary btn-block"
+        id="muteToggle"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          className="fa fa-fw fa-w-16 fa-volume-off"
+          title="Mute"
+        />
+      </button>
+    </div>
+    <div
+      className="col-sm-auto col-xs-12"
+    >
+      <button
+        className="CM-btn btn btn-primary btn-block"
+        type="button"
+      >
+        <i
+          className="fa fa-fw fa-w-16 fa-angle-double-left"
+          title="Reset"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PlayerControls render should render pause button when playing 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row justify-content-sm-center no-gutters"
+  >
+    <div
+      className="col-sm-auto col-xs-12"
+    >
+      <button
+        className="CM-btn btn btn-primary btn-block"
+        type="button"
+      >
+        <i
+          className="fa fa-fw fa-w-16 fa-pause-circle"
+          title="Pause"
+        />
+      </button>
+    </div>
+    <div
+      className="col-sm-auto col-xs-12"
+    >
+      <input
+        className="form-control"
+        id="commentary-speed"
+        max={5}
+        min={1}
+        onChange={[Function]}
+        title="Commentary speed - Very slow"
+        type="number"
+        value={1}
+      />
+    </div>
+    <div
+      className="col-sm-auto col-xs-12"
+    >
+      <button
+        className="CM-btn btn btn-primary btn-block"
+        id="muteToggle"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          className="fa fa-fw fa-w-16 fa-volume-up"
+          title="Unmute"
+        />
+      </button>
+    </div>
+    <div
+      className="col-sm-auto col-xs-12"
+    >
+      <button
+        className="CM-btn btn btn-primary btn-block"
+        type="button"
+      >
+        <i
+          className="fa fa-fw fa-w-16 fa-angle-double-left"
+          title="Reset"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PlayerControls render should render play button when paused 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row justify-content-sm-center no-gutters"
+  >
+    <div
+      className="col-sm-auto col-xs-12"
+    >
+      <button
+        className="CM-btn btn btn-primary btn-block"
+        type="button"
+      >
+        <i
+          className="fa fa-fw fa-w-16 fa-play-circle"
+          title="Play"
+        />
+      </button>
+    </div>
+    <div
+      className="col-sm-auto col-xs-12"
+    >
+      <input
+        className="form-control"
+        id="commentary-speed"
+        max={5}
+        min={1}
+        onChange={[Function]}
+        title="Commentary speed - Very slow"
+        type="number"
+        value={1}
+      />
+    </div>
+    <div
+      className="col-sm-auto col-xs-12"
+    >
+      <button
+        className="CM-btn btn btn-primary btn-block"
+        id="muteToggle"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          className="fa fa-fw fa-w-16 fa-volume-up"
+          title="Unmute"
+        />
+      </button>
+    </div>
+    <div
+      className="col-sm-auto col-xs-12"
+    >
+      <button
+        className="CM-btn btn btn-primary btn-block"
+        type="button"
+      >
+        <i
+          className="fa fa-fw fa-w-16 fa-angle-double-left"
+          title="Reset"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PlayerControls render should render unmute button when muted 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row justify-content-sm-center no-gutters"
+  >
+    <div
+      className="col-sm-auto col-xs-12"
+    >
+      <button
+        className="CM-btn btn btn-primary btn-block"
+        type="button"
+      >
+        <i
+          className="fa fa-fw fa-w-16 fa-pause-circle"
+          title="Pause"
+        />
+      </button>
+    </div>
+    <div
+      className="col-sm-auto col-xs-12"
+    >
+      <input
+        className="form-control"
+        id="commentary-speed"
+        max={5}
+        min={1}
+        onChange={[Function]}
+        title="Commentary speed - Very slow"
+        type="number"
+        value={1}
+      />
+    </div>
+    <div
+      className="col-sm-auto col-xs-12"
+    >
+      <button
+        className="CM-btn btn btn-primary btn-block"
+        id="muteToggle"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          className="fa fa-fw fa-w-16 fa-volume-up"
+          title="Unmute"
+        />
+      </button>
+    </div>
+    <div
+      className="col-sm-auto col-xs-12"
+    >
+      <button
+        className="CM-btn btn btn-primary btn-block"
+        type="button"
+      >
+        <i
+          className="fa fa-fw fa-w-16 fa-angle-double-left"
+          title="Reset"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;

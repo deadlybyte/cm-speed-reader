@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App render should render as expected 1`] = `
+<div
+  className="container-fluid"
+>
+  <header
+    className="App-header CM-block d-flex align-items-center justify-content-center"
+  >
+    <h1
+      className="App-title"
+    >
+      Championship Manager Speed Reader
+    </h1>
+  </header>
+  <div
+    className="row no-gutters"
+  >
+    <div
+      className="col CM-overlay"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="row justify-content-sm-center no-gutters"
+        >
+          <div
+            className="col-sm-auto col-xs-12"
+          >
+            <button
+              className="CM-btn btn btn-primary btn-block"
+              type="button"
+            >
+              <i
+                className="fa fa-fw fa-w-16 fa-pause-circle"
+                title="Pause"
+              />
+            </button>
+          </div>
+          <div
+            className="col-sm-auto col-xs-12"
+          >
+            <input
+              className="form-control"
+              id="commentary-speed"
+              max={5}
+              min={1}
+              onChange={[Function]}
+              title="Commentary speed - Very slow"
+              type="number"
+              value={1}
+            />
+          </div>
+          <div
+            className="col-sm-auto col-xs-12"
+          >
+            <button
+              className="CM-btn btn btn-primary btn-block"
+              id="muteToggle"
+              onClick={[Function]}
+              type="button"
+            >
+              <i
+                className="fa fa-fw fa-w-16 fa-volume-up"
+                title="Unmute"
+              />
+            </button>
+          </div>
+          <div
+            className="col-sm-auto col-xs-12"
+          >
+            <button
+              className="CM-btn btn btn-primary btn-block"
+              type="button"
+            >
+              <i
+                className="fa fa-fw fa-w-16 fa-angle-double-left"
+                title="Reset"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <div
+        className="CM-overlay CM-date"
+      >
+        <span>
+          Tuesday 14th February 2017
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="row no-gutters"
+  >
+    <div
+      className="col CM-overlay"
+    >
+      <div
+        className="CM-match-block"
+      >
+        <div
+          className="CM-block CM-commentary-block"
+        >
+          <p
+            className="App-intro"
+          >
+            <span>
+               
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="row no-gutters"
+  >
+    <div
+      className="col CM-overlay CM-match-metadata"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col col-sm-4"
+        >
+          <span>
+            Version - 
+            0.1.0
+          </span>
+        </div>
+        <div
+          className="col-sm-4 ml-auto text-md-right"
+        >
+          <span
+            className="CM-weather-forecast"
+          >
+            Weather - 
+            Gusty, Drizzle
+            <span
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": ", 10&deg;C",
+                }
+              }
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <div
+        className="CM-venue-block"
+      >
+        <p>
+          <span>
+            Unknown
+            , 
+            Unknown
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
