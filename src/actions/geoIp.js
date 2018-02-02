@@ -26,8 +26,25 @@ export const fetchGeoIp = () => {
   return async dispatch => {
     dispatch(fetchGeoIpRequest());
     try {
-      const response = await fetch('https://freegeoip.net/json/');
-      const json = await response.json();
+      let json;
+      if (process.env.NODE_ENV !== 'development') {
+        const response = await fetch('https://freegeoip.net/json/');
+        json = await response.json();
+      } else {
+        json = {
+          ip: '0.0.0.0',
+          country_code: 'GB',
+          country_name: 'United Kingdom',
+          region_code: 'ENG',
+          region_name: 'England',
+          city: 'Southampton',
+          zip_code: 'SO14',
+          time_zone: 'Europe/London',
+          latitude: 50.9,
+          longitude: -1.4,
+          metro_code: 0
+        };
+      }
       dispatch(fetchGeoIpSuccess(json));
     } catch (ex) {
       dispatch(fetchGeoIpFailure(ex))
