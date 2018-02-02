@@ -3,8 +3,9 @@ import CMSpeedReadPlayer from '../components/CMSpeedReadPlayer';
 
 const mapStateToProps = (state) => {
   const { settings } = state;
-  const { isMuted, speed } = settings;
+  const { isPlaying, isMuted, speed } = settings;
   return {
+    isPlaying,
     isMuted,
     speed
   };

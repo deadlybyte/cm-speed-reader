@@ -11,15 +11,17 @@ class PlayerControls extends Component {
 
   static propTypes = {
     adjustCommentarySpeed: PropTypes.func.isRequired,
-    isPlaying: PropTypes.bool,
     isMuted: PropTypes.bool.isRequired,
+    isPlaying: PropTypes.bool,
     muteToggle: PropTypes.func.isRequired,
+    playToggle: PropTypes.func.isRequired,
     speed: PropTypes.number.isRequired,
   }
 
   constructor(props) {
     super(props);
     this.onMuteToggleClick = this.onMuteToggleClick.bind(this);
+    this.onPlayToggleClick = this.onPlayToggleClick.bind(this);
     this.onSpeedChange = this.onSpeedChange.bind(this);
   }
 
@@ -31,7 +33,7 @@ class PlayerControls extends Component {
       <div className="container">
         <div className="row justify-content-sm-center no-gutters">
           <div className="col-sm-auto col-xs-12">
-            <button type="button" className="CM-btn btn btn-primary btn-block">
+            <button id="playToggle" type="button" className="CM-btn btn btn-primary btn-block" onClick={this.onPlayToggleClick}>
               <i className={classNames({ fa: true, 'fa-fw': true, 'fa-w-16': true, 'fa-play-circle': !isPlaying, 'fa-pause-circle': isPlaying })} title={isPlaying ? 'Pause' : 'Play'} />
             </button>
           </div>
@@ -51,6 +53,14 @@ class PlayerControls extends Component {
         </div>
       </div>
     );
+  }
+
+  onPlayToggleClick(event) {
+    event.preventDefault();
+
+    const { playToggle } = this.props;
+
+    playToggle();
   }
 
   onMuteToggleClick(event) {

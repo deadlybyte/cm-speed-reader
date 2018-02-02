@@ -12,6 +12,8 @@ exports[`PlayerControls render should render as expected 1`] = `
     >
       <button
         className="CM-btn btn btn-primary btn-block"
+        id="playToggle"
+        onClick={[Function]}
         type="button"
       >
         <i
@@ -78,6 +80,8 @@ exports[`PlayerControls render should render mute button when not muted 1`] = `
     >
       <button
         className="CM-btn btn btn-primary btn-block"
+        id="playToggle"
+        onClick={[Function]}
         type="button"
       >
         <i
@@ -144,6 +148,8 @@ exports[`PlayerControls render should render pause button when playing 1`] = `
     >
       <button
         className="CM-btn btn btn-primary btn-block"
+        id="playToggle"
+        onClick={[Function]}
         type="button"
       >
         <i
@@ -210,6 +216,8 @@ exports[`PlayerControls render should render play button when paused 1`] = `
     >
       <button
         className="CM-btn btn btn-primary btn-block"
+        id="playToggle"
+        onClick={[Function]}
         type="button"
       >
         <i
@@ -276,6 +284,8 @@ exports[`PlayerControls render should render unmute button when muted 1`] = `
     >
       <button
         className="CM-btn btn btn-primary btn-block"
+        id="playToggle"
+        onClick={[Function]}
         type="button"
       >
         <i

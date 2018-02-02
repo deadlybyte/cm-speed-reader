@@ -13,6 +13,7 @@ describe('App', () => {
     geoIp: {
     },
     settings: {
+      isPlaying: true,
       isMuted: true,
       speed: 1
     },
@@ -58,7 +59,7 @@ describe('App', () => {
     const fetchGeoIpSpy = jest.fn();
 
     it('should call fetchGeoIp', () => {
-      const componentUnderTest = shallow(
+      shallow(
         <App fetchGeoIp={fetchGeoIpSpy} />
       );
 

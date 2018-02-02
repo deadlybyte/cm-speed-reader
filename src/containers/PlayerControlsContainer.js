@@ -1,14 +1,15 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import PlayerControls from '../components/PlayerControls';
-import { adjustCommentarySpeed, muteToggle } from '../actions/settings';
+import { adjustCommentarySpeed, muteToggle, playToggle } from '../actions/settings';
 
 const mapStateToProps = (state) => {
   const { settings } = state;
-  const { isMuted, speed } = settings;
+  const { isMuted, isPlaying, speed } = settings;
 
   return {
     isMuted,
+    isPlaying,
     speed
   };
 }
@@ -16,7 +17,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
     adjustCommentarySpeed,
-    muteToggle
+    muteToggle,
+    playToggle
   }, dispatch);
 }
 

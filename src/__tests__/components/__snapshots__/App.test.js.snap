@@ -30,6 +30,8 @@ exports[`App render should render as expected 1`] = `
           >
             <button
               className="CM-btn btn btn-primary btn-block"
+              id="playToggle"
+              onClick={[Function]}
               type="button"
             >
               <i

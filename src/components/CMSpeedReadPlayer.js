@@ -6,10 +6,12 @@ import fullTimeWhistleAudio from '../media/audio/full-time-whistle.mp3';
 
 class CMSpeedReadPlayer extends Component {
   static defaultProps = {
+    isPlaying: true,
     isMuted: true
   };
 
   static propTypes = {
+    isPlaying: PropTypes.bool,
     isMuted: PropTypes.bool,
     speed: PropTypes.number.isRequired
   };
@@ -30,13 +32,14 @@ class CMSpeedReadPlayer extends Component {
 
   render() {
     const { playFinalWhistle } = this;
-    const { speed } = this.props;
+    const { isPlaying, speed } = this.props;
 
     return (
       <div className="CM-block CM-commentary-block">
         <p className="App-intro">
           <SpeedyReader
             autoPlay
+            isPlaying={isPlaying}
             inputText="To get started, edit src/App.js and save to reload."
             speed={speed * 100}
             onFinish={playFinalWhistle}
