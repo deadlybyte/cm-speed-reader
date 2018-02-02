@@ -15,6 +15,7 @@ describe('PlayerControls', () => {
           isMuted
           muteToggle={jest.fn}
           playToggle={jest.fn}
+          resetCommentary={jest.fn()}
         />
       , div);
       ReactDOM.unmountComponentAtNode(div);
@@ -28,6 +29,7 @@ describe('PlayerControls', () => {
           isMuted
           muteToggle={jest.fn}
           playToggle={jest.fn}
+          resetCommentary={jest.fn()}
         />
       ).toJSON();
       expect(componentUnderTest).toMatchSnapshot();
@@ -41,6 +43,7 @@ describe('PlayerControls', () => {
           isMuted
           muteToggle={jest.fn}
           playToggle={jest.fn}
+          resetCommentary={jest.fn()}
         />
       ).toJSON();
       expect(componentUnderTest).toMatchSnapshot();
@@ -54,6 +57,7 @@ describe('PlayerControls', () => {
           isMuted={false}
           muteToggle={jest.fn}
           playToggle={jest.fn}
+          resetCommentary={jest.fn()}
         />
       ).toJSON();
       expect(componentUnderTest).toMatchSnapshot();
@@ -68,6 +72,7 @@ describe('PlayerControls', () => {
           isPlaying
           muteToggle={jest.fn}
           playToggle={jest.fn}
+          resetCommentary={jest.fn()}
         />
       ).toJSON();
       expect(componentUnderTest).toMatchSnapshot();
@@ -82,6 +87,7 @@ describe('PlayerControls', () => {
           isPlaying={false}
           muteToggle={jest.fn}
           playToggle={jest.fn}
+          resetCommentary={jest.fn()}
         />
       ).toJSON();
       expect(componentUnderTest).toMatchSnapshot();
@@ -104,6 +110,7 @@ describe('PlayerControls', () => {
             isMuted
             muteToggle={muteToggleSpy}
             playToggle={jest.fn()}
+            resetCommentary={jest.fn()}
           />
         );
 
@@ -129,6 +136,7 @@ describe('PlayerControls', () => {
             isMuted
             muteToggle={jest.fn()}
             playToggle={playToggleSpy}
+            resetCommentary={jest.fn()}
           />
         );
 
@@ -136,6 +144,32 @@ describe('PlayerControls', () => {
         playToggleButton.simulate('click', { preventDefault: jest.fn() });
 
         expect(playToggleSpy).toHaveBeenCalled();
+      });
+    });
+
+    describe('onResetClick', () => {
+      let resetCommentarySpy;
+
+      beforeEach(() => {
+        resetCommentarySpy = jest.fn();
+      });
+
+      it('should call resetCommentary when reset button is clicked', () => {
+        const componentUnderTest = shallow(
+          <PlayerControls
+            speed={1}
+            adjustCommentarySpeed={jest.fn()}
+            isMuted
+            muteToggle={jest.fn()}
+            playToggle={jest.fn()}
+            resetCommentary={resetCommentarySpy}
+          />
+        );
+
+        const resetButton = componentUnderTest.find('button#reset');
+        resetButton.simulate('click', { preventDefault: jest.fn() });
+
+        expect(resetCommentarySpy).toHaveBeenCalled();
       });
     });
 
@@ -154,10 +188,11 @@ describe('PlayerControls', () => {
             isMuted
             muteToggle={jest.fn()}
             playToggle={jest.fn()}
+            resetCommentary={jest.fn()}
           />
         );
 
-        const speedInput = componentUnderTest.find('input');
+        const speedInput = componentUnderTest.find('input#commentary-speed');
         speedInput.simulate('change', { preventDefault: jest.fn(), target: { value: '1' } });
 
         expect(adjustCommentarySpeedSpy).toHaveBeenCalled();
@@ -171,6 +206,7 @@ describe('PlayerControls', () => {
             isMuted
             muteToggle={jest.fn()}
             playToggle={jest.fn()}
+            resetCommentary={jest.fn()}
           />
         );
 

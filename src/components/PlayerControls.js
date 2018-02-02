@@ -15,6 +15,7 @@ class PlayerControls extends Component {
     isPlaying: PropTypes.bool,
     muteToggle: PropTypes.func.isRequired,
     playToggle: PropTypes.func.isRequired,
+    resetCommentary: PropTypes.func.isRequired,
     speed: PropTypes.number.isRequired,
   }
 
@@ -22,6 +23,7 @@ class PlayerControls extends Component {
     super(props);
     this.onMuteToggleClick = this.onMuteToggleClick.bind(this);
     this.onPlayToggleClick = this.onPlayToggleClick.bind(this);
+    this.onResetClick = this.onResetClick.bind(this);
     this.onSpeedChange = this.onSpeedChange.bind(this);
   }
 
@@ -46,7 +48,7 @@ class PlayerControls extends Component {
             </button>
           </div>
           <div className="col-sm-auto col-xs-12">
-            <button type="button" className="CM-btn btn btn-primary btn-block">
+            <button id="reset" type="button" className="CM-btn btn btn-primary btn-block" onClick={this.onResetClick}>
               <i className="fa fa-fw fa-w-16 fa-angle-double-left" title="Reset" />
             </button>
           </div>
@@ -69,6 +71,14 @@ class PlayerControls extends Component {
     const { muteToggle } = this.props;
 
     muteToggle();
+  }
+
+  onResetClick(event) {
+    event.preventDefault();
+
+    const { resetCommentary } = this.props;
+
+    resetCommentary();
   }
 
   onSpeedChange(event) {
