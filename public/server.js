@@ -1,6 +1,6 @@
-var express = require('express');
-var server = express();
-var options = {
+const express = require('express');
+const server = express();
+const options = {
   index: 'index.html'
 };
 server.use('/', express.static('/home/site/wwwroot', options));
