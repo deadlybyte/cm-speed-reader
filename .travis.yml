@@ -3,6 +3,11 @@ node_js:
   - "node"
   - "8"
   - "7"
+install:
+  - npm install -g codecov
 cache:
   directories:
     - "node_modules"
+script:
+  - npm test -- --coverage
+  - codecov
