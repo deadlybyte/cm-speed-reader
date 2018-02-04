@@ -53,6 +53,7 @@ describe('actions', () => {
 
       await store.dispatch(fetchGeoIp());
       expect(store.getActions()).toEqual(expectedActions);
+      expect(fetchMock.called()).toBeTruthy();
     });
 
     it('should create FETCH_GEO_IP_ADDRESS_FAILURE action when fetching geoip has failed', async () => {
@@ -81,6 +82,42 @@ describe('actions', () => {
 
       await store.dispatch(fetchGeoIp());
       expect(store.getActions()).toEqual(expectedActions);
+      expect(fetchMock.called()).toBeTruthy();
+    });
+
+    it('should create FETCH_GEO_IP_ADDRESS_SUCCESS action and not fetch the geoip from the api and mocks the data when in development mode', async () => {
+      const NODE_ENV = process.env.NODE_ENV;
+      process.env.NODE_ENV = 'development';
+
+      const body = {
+        ip: '0.0.0.0',
+        country_code: 'GB',
+        country_name: 'United Kingdom',
+        region_code: 'ENG',
+        region_name: 'England',
+        city: 'Southampton',
+        zip_code: 'SO14',
+        time_zone: 'Europe/London',
+        latitude: 50.9,
+        longitude: -1.4,
+        metro_code: 0
+      };
+
+      const expectedActions = [
+        {
+          type: FETCH_GEO_IP_ADDRESS_REQUEST
+        },
+        {
+          type: FETCH_GEO_IP_ADDRESS_SUCCESS,
+          body
+        }
+      ];
+
+      const store = mockStore({});
+
+      await store.dispatch(fetchGeoIp());
+      expect(store.getActions()).toEqual(expectedActions);
+      expect(fetchMock.called()).toBeFalsy();
     });
   });
 });

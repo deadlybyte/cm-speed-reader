@@ -79,6 +79,7 @@ describe('actions', () => {
 
       await store.dispatch(fetchWeatherForecast(139, 35));
       expect(store.getActions()).toEqual(expectedActions);
+      expect(fetchMock.called()).toBeTruthy();
     });
 
     it('should create FETCH_WEATHER_FORECAST_FAILURE action when fetching the weather forecast has failed', async () => {
@@ -109,6 +110,68 @@ describe('actions', () => {
 
       await store.dispatch(fetchWeatherForecast(139, 35));
       expect(store.getActions()).toEqual(expectedActions);
+      expect(fetchMock.called()).toBeTruthy();
+    });
+
+    it('should create FETCH_WEATHER_FORECAST_SUCCESS action and not fetch weather forecast from the api and mocks the data when in development mode', async () => {
+      const NODE_ENV = process.env.NODE_ENV;
+      process.env.NODE_ENV = 'development';
+
+      const body = {
+        coord: {
+          lon: 139, lat: 35
+        },
+        sys: {
+          country: 'JP',
+          sunrise: 1369769524,
+          sunset: 1369821049
+        },
+        weather: [{
+          id: 804,
+          main: 'clouds',
+          description: 'overcast clouds',
+          icon: '04n'
+        }],
+        main: {
+          temp: 21.5,
+          humidity: 89,
+          pressure: 1013,
+          temp_min: 287.04,
+          temp_max: 292.04
+        },
+        wind: {
+          speed: 7.31,
+          deg: 187.002
+        },
+        rain: {
+          '3h': 0
+        },
+        clouds: {
+          all: 92
+        },
+        dt: 1369824698,
+        id: 1851632,
+        name: 'Shuzenji',
+        cod: 200
+      };
+
+      const expectedActions = [
+        {
+          type: FETCH_WEATHER_FORECAST_REQUEST,
+          longitude: 139,
+          latitude: 35
+        },
+        {
+          type: FETCH_WEATHER_FORECAST_SUCCESS,
+          body
+        }
+      ];
+
+      const store = mockStore({});
+
+      await store.dispatch(fetchWeatherForecast(139, 35));
+      expect(store.getActions()).toEqual(expectedActions);
+      expect(fetchMock.called()).toBeFalsy();
     });
   });
 });
