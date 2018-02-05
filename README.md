@@ -3,6 +3,7 @@
 A Championship Manager inspired speed reader web application, written using modern web technologies (ReactJS, Redux, Bootstrap 4, etc).
 
 [![Build Status](https://travis-ci.org/deadlybyte/cm-speed-reader.svg?branch=master)](https://travis-ci.org/deadlybyte/cm-speed-reader)
+[![codecov](https://codecov.io/gh/deadlybyte/cm-speed-reader/branch/master/graph/badge.svg)](https://codecov.io/gh/deadlybyte/cm-speed-reader)
 
 ## What is Championship Manager
 

@@ -45,5 +45,13 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "fetch-mock": "^6.0.0",
     "redux-mock-store": "^1.5.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/**/index.{js,jsx}",
+      "!src/**/containers/AppContainer.{js,jsx}",
+      "!src/*.{js,jsx}"
+    ]
   }
 }
