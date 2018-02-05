@@ -9,7 +9,7 @@ const Weather = (props) => {
     <span className="CM-weather-forecast">
       Weather - {forecast ? forecast : 'Unknown'}
       {
-        temperature &&
+        (temperature !== null || temperature !== undefined) &&
         <span>, {temperature}&deg;C</span>
       }
     </span>
