@@ -118,6 +118,8 @@ describe('actions', () => {
       await store.dispatch(fetchGeoIp());
       expect(store.getActions()).toEqual(expectedActions);
       expect(fetchMock.called()).toBeFalsy();
+
+      process.env.NODE_ENV = NODE_ENV;
     });
   });
 });

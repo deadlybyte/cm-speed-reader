@@ -172,6 +172,8 @@ describe('actions', () => {
       await store.dispatch(fetchWeatherForecast(139, 35));
       expect(store.getActions()).toEqual(expectedActions);
       expect(fetchMock.called()).toBeFalsy();
+
+      process.env.NODE_ENV = NODE_ENV;
     });
   });
 });
