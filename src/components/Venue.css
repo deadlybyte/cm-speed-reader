@@ -1,5 +1,5 @@
 .CM-venue-block {
-  background-color: #848284;
+  background-color: #777477;
   border: 3px outset;
   border-top-color: #ded7d6;
   border-left-color: #ded7d6;
@@ -7,16 +7,32 @@
   border-right-color: #5a5552;
   padding: 2px;
   text-align: center;
-  min-height: 40px;
-  margin: 10px 0;
+  min-height: 20px;
+  margin: 2px 0;
 }
 
 .CM-venue-block span {
   color: white;
-  font-size: x-large;
+  font-size: large;
 }
 
 .CM-venue-block p {
-  margin: 12px;
+  margin: 4px 12px;
   word-wrap: break-word;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .CM-venue-block {
+    min-height: 40px;
+    margin: 10px 0;
+  }
+
+  .CM-venue-block span {
+    font-size: x-large;
+  }
+
+  .CM-venue-block p {
+    margin: 12px;
+  }
 }

@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CMSpeedReadPlayerContainer from '../containers/CMSpeedReadPlayerContainer';
@@ -8,6 +9,7 @@ import VenueContainer from '../containers/VenueContainer';
 import WeatherContainer from '../containers/WeatherContainer';
 import './App.css';
 import '../media/images/stadium-background.jpeg';
+import '../media/images/stadium-background-x1.jpeg';
 
 class App extends Component {
   static defaultProps = {
@@ -46,7 +48,7 @@ class App extends Component {
             <PlayerControlsContainer />
           </div>
         </div>
-        <div className="row">
+        <div className="row no-gutters">
           <div className="col">
             <DateDisplay />
           </div>
@@ -60,8 +62,8 @@ class App extends Component {
         </div>
         <div className="row no-gutters">
           <div className="col CM-overlay CM-match-metadata">
-            <div className="row">
-              <div className="col col-sm-4">
+            <div className="row no-gutters">
+              <div className="col-sm-4">
                 <VersionInfo />
               </div>
               <div className="col-sm-4 ml-auto text-md-right">
@@ -70,7 +72,7 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row no-gutters">
           <div className="col">
             <VenueContainer />
           </div>

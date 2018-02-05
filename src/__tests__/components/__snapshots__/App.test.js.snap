@@ -89,7 +89,7 @@ exports[`App render should render as expected 1`] = `
     </div>
   </div>
   <div
-    className="row"
+    className="row no-gutters"
   >
     <div
       className="col"
@@ -133,10 +133,10 @@ exports[`App render should render as expected 1`] = `
       className="col CM-overlay CM-match-metadata"
     >
       <div
-        className="row"
+        className="row no-gutters"
       >
         <div
-          className="col col-sm-4"
+          className="col-sm-4"
         >
           <span>
             Version - 
@@ -162,7 +162,7 @@ exports[`App render should render as expected 1`] = `
     </div>
   </div>
   <div
-    className="row"
+    className="row no-gutters"
   >
     <div
       className="col"
