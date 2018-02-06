@@ -5,6 +5,8 @@ A `Championship Manager` inspired speed reader web application, written using mo
 [![Build Status](https://travis-ci.org/deadlybyte/cm-speed-reader.svg?branch=master)](https://travis-ci.org/deadlybyte/cm-speed-reader)
 [![codecov](https://codecov.io/gh/deadlybyte/cm-speed-reader/branch/master/graph/badge.svg)](https://codecov.io/gh/deadlybyte/cm-speed-reader)
 
+![Championship Manager inspired speed reader in action](cm-speed-reader-demo.gif)
+
 ## What is Championship Manager
 
 `Championship Manager` was a football management simulator computer game, that I wasted many hours playing during the course of my younger years. It used a commentary text based system to show live highlights of a match.
