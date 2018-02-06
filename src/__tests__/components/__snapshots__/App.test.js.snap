@@ -32,12 +32,25 @@ exports[`App render should render as expected 1`] = `
               className="CM-btn btn btn-primary btn-block"
               id="playToggle"
               onClick={[Function]}
+              title="Pause"
               type="button"
             >
-              <i
-                className="fa fa-fw fa-w-16 fa-pause-circle"
-                title="Pause"
-              />
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-pause-circle fa-w-16 fa-fw "
+                data-icon="pause-circle"
+                data-prefix="fas"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-16 328c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v160zm112 0c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v160z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
             </button>
           </div>
           <div
@@ -84,12 +97,25 @@ exports[`App render should render as expected 1`] = `
               className="CM-btn btn btn-primary btn-block"
               id="muteToggle"
               onClick={[Function]}
+              title="Unmute"
               type="button"
             >
-              <i
-                className="fa fa-fw fa-w-16 fa-volume-up"
-                title="Unmute"
-              />
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-volume-up fa-w-18 fa-fw "
+                data-icon="volume-up"
+                data-prefix="fas"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 576 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M256 88.017v335.964c0 21.438-25.943 31.998-40.971 16.971L126.059 352H24c-13.255 0-24-10.745-24-24V184c0-13.255 10.745-24 24-24h102.059l88.971-88.954c15.01-15.01 40.97-4.49 40.97 16.971zm182.056-77.876C422.982.92 403.283 5.668 394.061 20.745c-9.221 15.077-4.473 34.774 10.604 43.995C468.967 104.063 512 174.983 512 256c0 73.431-36.077 142.292-96.507 184.206-14.522 10.072-18.129 30.01-8.057 44.532 10.076 14.528 30.016 18.126 44.531 8.057C529.633 438.927 576 350.406 576 256c0-103.244-54.579-194.877-137.944-245.859zM480 256c0-68.547-36.15-129.777-91.957-163.901-15.076-9.22-34.774-4.471-43.994 10.607-9.22 15.078-4.471 34.774 10.607 43.994C393.067 170.188 416 211.048 416 256c0 41.964-20.62 81.319-55.158 105.276-14.521 10.073-18.128 30.01-8.056 44.532 6.216 8.96 16.185 13.765 26.322 13.765a31.862 31.862 0 0 0 18.21-5.709C449.091 377.953 480 318.938 480 256zm-96 0c0-33.717-17.186-64.35-45.972-81.944-15.079-9.214-34.775-4.463-43.992 10.616s-4.464 34.775 10.615 43.992C314.263 234.538 320 244.757 320 256a32.056 32.056 0 0 1-13.802 26.332c-14.524 10.069-18.136 30.006-8.067 44.53 10.07 14.525 30.008 18.136 44.53 8.067C368.546 316.983 384 287.478 384 256z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
             </button>
           </div>
           <div
@@ -99,12 +125,25 @@ exports[`App render should render as expected 1`] = `
               className="CM-btn btn btn-primary btn-block"
               id="reset"
               onClick={[Function]}
+              title="Reset"
               type="button"
             >
-              <i
-                className="fa fa-fw fa-w-16 fa-angle-double-left"
-                title="Reset"
-              />
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-redo fa-w-16 fa-fw "
+                data-icon="redo"
+                data-prefix="fas"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M500.333 0h-47.411c-6.853 0-12.314 5.729-11.986 12.574l3.966 82.759C399.416 41.899 331.672 8 256.001 8 119.34 8 7.899 119.526 8 256.187 8.101 393.068 119.096 504 256 504c63.926 0 122.202-24.187 166.178-63.908 5.113-4.618 5.354-12.561.482-17.433l-33.971-33.971c-4.466-4.466-11.64-4.717-16.38-.543C341.308 415.448 300.606 432 256 432c-97.267 0-176-78.716-176-176 0-97.267 78.716-176 176-176 60.892 0 114.506 30.858 146.099 77.8l-101.525-4.865c-6.845-.328-12.574 5.133-12.574 11.986v47.411c0 6.627 5.373 12 12 12h200.333c6.627 0 12-5.373 12-12V12c0-6.627-5.373-12-12-12z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
             </button>
           </div>
         </div>
