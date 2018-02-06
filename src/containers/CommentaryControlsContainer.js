@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import PlayerControls from '../components/PlayerControls';
+import CommentaryControls from '../components/CommentaryControls';
 import { adjustCommentarySpeed, muteToggle, playToggle, resetCommentary } from '../actions/settings';
 
 const mapStateToProps = (state) => {
@@ -24,6 +24,6 @@ const mapDispatchToProps = (dispatch) => {
   }, dispatch);
 }
 
-const PlayerControlsContainer = connect(mapStateToProps, mapDispatchToProps)(PlayerControls);
+const CommentaryControlsContainer = connect(mapStateToProps, mapDispatchToProps)(CommentaryControls);
 
-export default PlayerControlsContainer;
+export default CommentaryControlsContainer;

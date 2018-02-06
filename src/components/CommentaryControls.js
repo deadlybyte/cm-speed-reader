@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-class PlayerControls extends Component {
+class CommentaryControls extends Component {
   static commentarySpeeds = ['Very slow', 'Slow', 'Normal', 'Fast', 'Very Fast'];
 
   static defaultProps = {
@@ -30,7 +30,7 @@ class PlayerControls extends Component {
 
   render() {
     const { isMuted, speed, isPlaying } = this.props;
-    const commentarySpeed = PlayerControls.commentarySpeeds[speed - 1];
+    const commentarySpeed = CommentaryControls.commentarySpeeds[speed - 1];
 
     return (
       <div className="container">
@@ -94,4 +94,4 @@ class PlayerControls extends Component {
   }
 };
 
-export default PlayerControls;
+export default CommentaryControls;

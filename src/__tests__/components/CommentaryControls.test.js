@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
-import PlayerControls from '../../components/PlayerControls';
+import CommentaryControls from '../../components/CommentaryControls';
 
 describe('PlayerControls', () => {
   describe('render', () => {
     it('should render without crashing', () => {
       const div = document.createElement('div');
       ReactDOM.render(
-        <PlayerControls
+        <CommentaryControls
           adjustCommentarySpeed={jest.fn}
           speed={1}
           isMuted
@@ -23,7 +23,7 @@ describe('PlayerControls', () => {
 
     it('should render as expected', () => {
       const componentUnderTest = renderer.create(
-        <PlayerControls
+        <CommentaryControls
           adjustCommentarySpeed={jest.fn()}
           speed={1}
           isMuted
@@ -37,7 +37,7 @@ describe('PlayerControls', () => {
 
     it('should render unmute button when muted', () => {
       const componentUnderTest = renderer.create(
-        <PlayerControls
+        <CommentaryControls
           adjustCommentarySpeed={jest.fn()}
           speed={1}
           isMuted
@@ -51,7 +51,7 @@ describe('PlayerControls', () => {
 
     it('should render mute button when not muted', () => {
       const componentUnderTest = renderer.create(
-        <PlayerControls
+        <CommentaryControls
           adjustCommentarySpeed={jest.fn()}
           speed={1}
           isMuted={false}
@@ -65,7 +65,7 @@ describe('PlayerControls', () => {
 
     it('should render pause button when playing', () => {
       const componentUnderTest = renderer.create(
-        <PlayerControls
+        <CommentaryControls
           adjustCommentarySpeed={jest.fn()}
           speed={1}
           isMuted
@@ -80,7 +80,7 @@ describe('PlayerControls', () => {
 
     it('should render play button when paused', () => {
       const componentUnderTest = renderer.create(
-        <PlayerControls
+        <CommentaryControls
           adjustCommentarySpeed={jest.fn()}
           speed={1}
           isMuted
@@ -104,7 +104,7 @@ describe('PlayerControls', () => {
 
       it('should call muteToggle when mute button is clicked', () => {
         const componentUnderTest = shallow(
-          <PlayerControls
+          <CommentaryControls
             speed={1}
             adjustCommentarySpeed={jest.fn()}
             isMuted
@@ -130,7 +130,7 @@ describe('PlayerControls', () => {
 
       it('should call playToggle when mute button is clicked', () => {
         const componentUnderTest = shallow(
-          <PlayerControls
+          <CommentaryControls
             speed={1}
             adjustCommentarySpeed={jest.fn()}
             isMuted
@@ -156,7 +156,7 @@ describe('PlayerControls', () => {
 
       it('should call resetCommentary when reset button is clicked', () => {
         const componentUnderTest = shallow(
-          <PlayerControls
+          <CommentaryControls
             speed={1}
             adjustCommentarySpeed={jest.fn()}
             isMuted
@@ -182,7 +182,7 @@ describe('PlayerControls', () => {
 
       it('should call adjustCommentarySpeed when input has changed', () => {
         const componentUnderTest = shallow(
-          <PlayerControls
+          <CommentaryControls
             speed={1}
             adjustCommentarySpeed={adjustCommentarySpeedSpy}
             isMuted
@@ -200,7 +200,7 @@ describe('PlayerControls', () => {
 
       it('should not call adjustCommentarySpeed when input is invalid', () => {
         const componentUnderTest = shallow(
-          <PlayerControls
+          <CommentaryControls
             speed={1}
             adjustCommentarySpeed={adjustCommentarySpeedSpy}
             isMuted

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CMSpeedReadPlayerContainer from '../containers/CMSpeedReadPlayerContainer';
 import DateDisplay from './DateDisplay';
-import PlayerControlsContainer from '../containers/PlayerControlsContainer';
+import CommentaryControlsContainer from '../containers/CommentaryControlsContainer';
 import VersionInfo from './VersionInfo';
 import VenueContainer from '../containers/VenueContainer';
 import WeatherContainer from '../containers/WeatherContainer';
@@ -45,7 +45,7 @@ class App extends Component {
         </header>
         <div className="row no-gutters">
           <div className="col CM-overlay">
-            <PlayerControlsContainer />
+            <CommentaryControlsContainer />
           </div>
         </div>
         <div className="row no-gutters">
