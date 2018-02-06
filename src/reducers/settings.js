@@ -29,6 +29,7 @@ const settings = (state = initialState, action) => {
     case RESET_COMMENTARY:
       return {
         ...state,
+        isPlaying: false,
         reset: ++state.reset
       };
     default:

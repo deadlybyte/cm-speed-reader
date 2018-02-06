@@ -13,6 +13,8 @@ class CMSpeedReadPlayer extends Component {
   static propTypes = {
     isPlaying: PropTypes.bool,
     isMuted: PropTypes.bool,
+    reset: PropTypes.number,
+    resetCommentary: PropTypes.func.isRequired,
     speed: PropTypes.number.isRequired
   };
 
@@ -21,25 +23,41 @@ class CMSpeedReadPlayer extends Component {
     this.playFinalWhistle = this.playFinalWhistle.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    const { isPlaying, reset } = this.props;
+
+    if (reset !== nextProps.reset) {
+      this.speedyReader.reset(false);
+    } else if (isPlaying !== nextProps.isPlaying) {
+      if (nextProps.isPlaying) {
+        this.speedyReader.play();
+      } else {
+        this.speedyReader.pause();
+      }
+    }
+  }
+
   async playFinalWhistle() {
-    const { isMuted } = this.props;
+    const { isMuted, resetCommentary } = this.props;
 
     if (!isMuted) {
       const audio = new Audio(fullTimeWhistleAudio);
       await audio.play();
     }
+
+    resetCommentary();
   }
 
   render() {
     const { playFinalWhistle } = this;
-    const { isPlaying, speed } = this.props;
+    const { speed } = this.props;
 
     return (
       <div className="CM-block CM-commentary-block">
         <p className="App-intro">
           <SpeedyReader
+            ref={(speedyReader) => this.speedyReader = speedyReader}
             autoPlay
-            isPlaying={isPlaying}
             inputText="To get started, edit src/App.js and save to reload."
             speed={speed * 100}
             onFinish={playFinalWhistle}

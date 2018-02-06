@@ -109,7 +109,7 @@ describe('reducers', () => {
     });
 
     describe('RESET_COMMENTARY', () => {
-      it('should reset the commentary', () => {
+      it('should reset the commentary and set isPlaying to false', () => {
         const initialState = {
           isMuted: false,
           isPlaying: true,
@@ -119,7 +119,7 @@ describe('reducers', () => {
 
         const expectedState = {
           isMuted: false,
-          isPlaying: true,
+          isPlaying: false,
           reset: 1,
           speed: 1
         };
