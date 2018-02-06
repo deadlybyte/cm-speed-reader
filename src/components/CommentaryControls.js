@@ -124,6 +124,6 @@ class CommentaryControls extends Component {
       adjustCommentarySpeed(newSpeed);
     }
   }
-};
+}
 
 export default CommentaryControls;

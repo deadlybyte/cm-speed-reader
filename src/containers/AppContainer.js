@@ -23,7 +23,7 @@ const mapDispatchToProps = (dispatch) => {
   }, dispatch);
 };
 
-const mergeProps = (stateProps, dispatchProps, ownProps) => {
+const mergeProps = (stateProps, dispatchProps) => {
   const { clientIp } = stateProps;
   const { fetchGeoIp } = dispatchProps;
   let fetchForecast;
