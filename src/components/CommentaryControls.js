@@ -1,7 +1,12 @@
 // @flow
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import faPlayCircle from '@fortawesome/fontawesome-free-solid/faPlayCircle';
+import faPauseCircle from '@fortawesome/fontawesome-free-solid/faPauseCircle';
+import faVolumeUp from '@fortawesome/fontawesome-free-solid/faVolumeUp';
+import faVolumeOff from '@fortawesome/fontawesome-free-solid/faVolumeOff';
+import faRedo from '@fortawesome/fontawesome-free-solid/faRedo';
 
 class CommentaryControls extends Component {
   static commentarySpeeds = ['Very slow', 'Slow', 'Normal', 'Fast', 'Very Fast'];
@@ -36,8 +41,15 @@ class CommentaryControls extends Component {
       <div className="container">
         <div className="row justify-content-sm-center no-gutters">
           <div className="col-sm-auto col-xs-12">
-            <button id="playToggle" type="button" className="CM-btn btn btn-primary btn-block" onClick={this.onPlayToggleClick}>
-              <i className={classNames({ fa: true, 'fa-fw': true, 'fa-w-16': true, 'fa-play-circle': !isPlaying, 'fa-pause-circle': isPlaying })} title={isPlaying ? 'Pause' : 'Play'} />
+            <button id="playToggle" type="button" className="CM-btn btn btn-primary btn-block" onClick={this.onPlayToggleClick} title={isPlaying ? "Pause" : "Play"}>
+              {
+                !isPlaying &&
+                <FontAwesomeIcon icon={faPlayCircle} fixedWidth />
+              }
+              {
+                isPlaying &&
+                <FontAwesomeIcon icon={faPauseCircle} fixedWidth />
+              }
             </button>
           </div>
           <div className="col-sm-auto col-xs-12">
@@ -57,13 +69,20 @@ class CommentaryControls extends Component {
             </select>
           </div>
           <div className="col-sm-auto col-xs-12">
-            <button id="muteToggle" type="button" className="CM-btn btn btn-primary btn-block" onClick={this.onMuteToggleClick}>
-              <i className={classNames({ fa: true, 'fa-fw': true, 'fa-w-16': true, 'fa-volume-up': isMuted, 'fa-volume-off': !isMuted })} title={ isMuted ? 'Unmute' : 'Mute' } />
+            <button id="muteToggle" type="button" className="CM-btn btn btn-primary btn-block" onClick={this.onMuteToggleClick} title={isMuted ? "Unmute" : "Mute"}>
+              {
+                isMuted &&
+                <FontAwesomeIcon icon={faVolumeUp} fixedWidth />
+              }
+              {
+                !isMuted &&
+                <FontAwesomeIcon icon={faVolumeOff} fixedWidth />
+              }
             </button>
           </div>
           <div className="col-sm-auto col-xs-12">
-            <button id="reset" type="button" className="CM-btn btn btn-primary btn-block" onClick={this.onResetClick}>
-              <i className="fa fa-fw fa-w-16 fa-angle-double-left" title="Reset" />
+            <button id="reset" type="button" className="CM-btn btn btn-primary btn-block" onClick={this.onResetClick} title="Reset">
+              <FontAwesomeIcon icon={faRedo} fixedWidth />
             </button>
           </div>
         </div>
