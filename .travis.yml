@@ -12,3 +12,13 @@ cache:
 script:
   - npm test -- --coverage
   - codecov
+  - npm run build
+before_deploy:
+  - cd build
+deploy:
+  provider: azure_web_apps
+  skip_cleanup: true
+  verbose: true
+  on:
+    node: "node"
+    tags: true
