@@ -192,8 +192,8 @@ describe('PlayerControls', () => {
           />
         );
 
-        const speedInput = componentUnderTest.find('input#commentary-speed');
-        speedInput.simulate('change', { preventDefault: jest.fn(), target: { value: '1' } });
+        const speedInput = componentUnderTest.find('select#commentary-speed');
+        speedInput.simulate('change', { preventDefault: jest.fn(), currentTarget: { value: '1' } });
 
         expect(adjustCommentarySpeedSpy).toHaveBeenCalled();
       });
@@ -210,8 +210,8 @@ describe('PlayerControls', () => {
           />
         );
 
-        const speedInput = componentUnderTest.find('input#commentary-speed');
-        speedInput.simulate('change', { preventDefault: jest.fn(), target: { value: 'test' } });
+        const speedInput = componentUnderTest.find('select#commentary-speed');
+        speedInput.simulate('change', { preventDefault: jest.fn(), currentTarget: { value: 'test' } });
 
         expect(adjustCommentarySpeedSpy).not.toHaveBeenCalled();
       });

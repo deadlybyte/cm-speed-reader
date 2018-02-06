@@ -4,7 +4,7 @@ const initialState = {
   isMuted: true,
   isPlaying: true,
   reset: 0,
-  speed: 1
+  speed: 3
 };
 
 const settings = (state = initialState, action) => {

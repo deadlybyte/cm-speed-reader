@@ -8,7 +8,7 @@ describe('reducers', () => {
         isMuted: true,
         isPlaying: true,
         reset: 0,
-        speed: 1,
+        speed: 3,
       });
     });
 
@@ -114,14 +114,14 @@ describe('reducers', () => {
           isMuted: false,
           isPlaying: true,
           reset: 0,
-          speed: 1
+          speed: 3
         };
 
         const expectedState = {
           isMuted: false,
           isPlaying: false,
           reset: 1,
-          speed: 1
+          speed: 3
         };
 
         expect(settings(initialState, { type: RESET_COMMENTARY })).toEqual(expectedState);

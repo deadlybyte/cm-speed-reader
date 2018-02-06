@@ -41,7 +41,20 @@ class CommentaryControls extends Component {
             </button>
           </div>
           <div className="col-sm-auto col-xs-12">
-            <input id="commentary-speed" className="form-control" type="number" min={1} max={5} value={speed} onChange={this.onSpeedChange} title={`Commentary speed - ${commentarySpeed}`} />
+            <select id="commentary-speed" defaultValue={speed} className="form-control" title={`Commentary speed - ${commentarySpeed}`} onChange={this.onSpeedChange}>
+              {
+                CommentaryControls.commentarySpeeds.map((commentarySpeed, index) => {
+                  return (
+                    <option
+                      key={index}
+                      value={index + 1}
+                    >
+                      {commentarySpeed}
+                    </option>
+                  );
+                })
+              }
+            </select>
           </div>
           <div className="col-sm-auto col-xs-12">
             <button id="muteToggle" type="button" className="CM-btn btn btn-primary btn-block" onClick={this.onMuteToggleClick}>
@@ -86,7 +99,7 @@ class CommentaryControls extends Component {
     event.preventDefault();
 
     const { adjustCommentarySpeed } = this.props;
-    const newSpeed = parseInt(event.target.value, 10);
+    const newSpeed = parseInt(event.currentTarget.value, 10);
 
     if (!isNaN(newSpeed)) {
       adjustCommentarySpeed(newSpeed);
