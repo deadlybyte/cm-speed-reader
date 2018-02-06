@@ -15,8 +15,8 @@ after_success:
   - codecov
   - npm run build
 before_deploy:
-  - cd build
   - git push origin master:refs/heads/master
+  - cd build
 deploy:
   provider: azure_web_apps
   skip_cleanup: true
