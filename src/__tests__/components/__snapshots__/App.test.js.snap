@@ -202,7 +202,7 @@ exports[`App render should render as expected 1`] = `
         >
           <span>
             Version - 
-            0.1.0
+            1.0.0
           </span>
         </div>
         <div

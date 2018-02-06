@@ -45,6 +45,7 @@ describe('App', () => {
     });
 
     it('should render as expected', () => {
+      process.env.REACT_APP_VERSION = '1.0.0';
       const componentUnderTest = renderer.create(
         <Provider store={store}>
           <App fetchGeoIp={jest.fn} />
