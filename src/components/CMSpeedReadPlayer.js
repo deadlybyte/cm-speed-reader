@@ -58,7 +58,7 @@ class CMSpeedReadPlayer extends Component {
           <SpeedyReader
             ref={(speedyReader) => this.speedyReader = speedyReader}
             autoPlay
-            inputText="To get started, edit src/App.js and save to reload."
+            inputText={process.env.REACT_APP_COMMENTARY_TEXT}
             speed={speed * 35}
             onFinish={playFinalWhistle}
           />
