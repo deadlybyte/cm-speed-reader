@@ -2,10 +2,10 @@
 
 exports[`App render should render as expected 1`] = `
 <div
-  className="container-fluid"
+  className="container-fluid d-flex flex-column CM-container "
 >
   <header
-    className="App-header CM-block d-flex align-items-center justify-content-center"
+    className="d-flex align-items-center justify-content-center App-header CM-block"
   >
     <h1
       className="App-title"
@@ -14,10 +14,10 @@ exports[`App render should render as expected 1`] = `
     </h1>
   </header>
   <div
-    className="row no-gutters"
+    className="row no-gutters CM-overlay"
   >
     <div
-      className="col CM-overlay"
+      className="col"
     >
       <div
         className="container"
@@ -166,10 +166,10 @@ exports[`App render should render as expected 1`] = `
     </div>
   </div>
   <div
-    className="row no-gutters"
+    className="row no-gutters align-items-center CM-commentary-container CM-overlay"
   >
     <div
-      className="col CM-overlay"
+      className="col"
     >
       <div
         className="CM-match-block"
@@ -189,16 +189,16 @@ exports[`App render should render as expected 1`] = `
     </div>
   </div>
   <div
-    className="row no-gutters"
+    className="row no-gutters justify-items-end CM-overlay"
   >
     <div
-      className="col CM-overlay CM-match-metadata"
+      className="col CM-match-metadata"
     >
       <div
         className="row no-gutters"
       >
         <div
-          className="col-sm-4"
+          className="col-sm-6"
         >
           <span>
             Version - 
@@ -206,7 +206,7 @@ exports[`App render should render as expected 1`] = `
           </span>
         </div>
         <div
-          className="col-sm-4 ml-auto text-md-right"
+          className="col-sm-6 ml-auto text-sm-right"
         >
           <span
             className="CM-weather-forecast"
@@ -224,7 +224,7 @@ exports[`App render should render as expected 1`] = `
     </div>
   </div>
   <div
-    className="row no-gutters"
+    className="row no-gutters justify-items-end"
   >
     <div
       className="col"

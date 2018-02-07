@@ -39,12 +39,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
-        <header className="App-header CM-block d-flex align-items-center justify-content-center">
+      <div className="container-fluid d-flex flex-column CM-container ">
+        <header className="d-flex align-items-center justify-content-center App-header CM-block">
           <h1 className="App-title">Championship Manager Speed Reader</h1>
         </header>
-        <div className="row no-gutters">
-          <div className="col CM-overlay">
+        <div className="row no-gutters CM-overlay">
+          <div className="col">
             <CommentaryControlsContainer />
           </div>
         </div>
@@ -53,26 +53,26 @@ class App extends Component {
             <DateDisplay />
           </div>
         </div>
-        <div className="row no-gutters">
-          <div className="col CM-overlay">
+        <div className="row no-gutters align-items-center CM-commentary-container CM-overlay">
+          <div className="col">
             <div className="CM-match-block">
               <CMSpeedReadPlayerContainer />
             </div>
           </div>
         </div>
-        <div className="row no-gutters">
-          <div className="col CM-overlay CM-match-metadata">
+        <div className="row no-gutters justify-items-end CM-overlay">
+          <div className="col CM-match-metadata">
             <div className="row no-gutters">
-              <div className="col-sm-4">
+              <div className="col-sm-6">
                 <VersionInfo />
               </div>
-              <div className="col-sm-4 ml-auto text-md-right">
+              <div className="col-sm-6 ml-auto text-sm-right">
                 <WeatherContainer />
               </div>
             </div>
           </div>
         </div>
-        <div className="row no-gutters">
+        <div className="row no-gutters justify-items-end">
           <div className="col">
             <VenueContainer />
           </div>

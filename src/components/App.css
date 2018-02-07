@@ -10,6 +10,10 @@ body {
   width: 100%;
 }
 
+.CM-container {
+  height: 100vh;
+}
+
 .App-header {
   background-color: #ff0000;
   line-height: 30px;
@@ -50,9 +54,6 @@ body {
 }
 
 .CM-match-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   min-height: 80px;
 }
 
@@ -71,6 +72,10 @@ body {
 .CM-block span {
   color: white;
   text-shadow: 2px 1px black;
+}
+
+.CM-commentary-container {
+  flex-grow: 1;
 }
 
 .CM-commentary-block {
@@ -142,9 +147,5 @@ body {
 
   .CM-overlay div {
     padding: 5px 10px;
-  }
-
-  .CM-match-block {
-    min-height: 450px;
   }
 }
