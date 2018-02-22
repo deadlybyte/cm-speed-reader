@@ -5501,9 +5501,9 @@ react-scripts@1.1.1:
   optionalDependencies:
     fsevents "^1.1.3"
 
-react-speedy-reader@^1.0.11:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/react-speedy-reader/-/react-speedy-reader-1.0.11.tgz#c83935e8b9603b589f2f3a55a08e88fcddf2dcbd"
+react-speedy-reader@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/react-speedy-reader/-/react-speedy-reader-1.0.12.tgz#c9337d60642709262033bfd8ff5fe464aecaa6c4"
   dependencies:
     prop-types "^15.6.0"
 
