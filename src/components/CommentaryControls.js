@@ -1,12 +1,15 @@
 // @flow
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import faPlayCircle from '@fortawesome/fontawesome-free-solid/faPlayCircle';
-import faPauseCircle from '@fortawesome/fontawesome-free-solid/faPauseCircle';
-import faVolumeUp from '@fortawesome/fontawesome-free-solid/faVolumeUp';
-import faVolumeOff from '@fortawesome/fontawesome-free-solid/faVolumeOff';
-import faRedo from '@fortawesome/fontawesome-free-solid/faRedo';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
+import { faPauseCircle } from '@fortawesome/free-solid-svg-icons';
+import { faVolumeUp } from '@fortawesome/free-solid-svg-icons';
+import { faVolumeOff } from '@fortawesome/free-solid-svg-icons';
+import { faRedo } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faPlayCircle, faPauseCircle, faVolumeUp, faVolumeOff, faRedo);
 
 class CommentaryControls extends Component {
   static commentarySpeeds = ['Very slow', 'Slow', 'Normal', 'Fast', 'Very Fast'];
