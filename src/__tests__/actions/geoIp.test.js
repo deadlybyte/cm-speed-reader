@@ -30,7 +30,7 @@ describe('actions', () => {
       };
 
       fetchMock.getOnce(
-        'https://freegeoip.net/json/',
+        `${process.env.REACT_APP_IP_STACK_BASE_URL}/check?access_key=${process.env.REACT_APP_IP_STACK_ACCESS_KEY}`,
         {
           body,
           headers: {
@@ -58,7 +58,7 @@ describe('actions', () => {
 
     it('should create FETCH_GEO_IP_ADDRESS_FAILURE action when fetching geoip has failed', async () => {
       fetchMock.getOnce(
-        'https://freegeoip.net/json/',
+        `${process.env.REACT_APP_IP_STACK_BASE_URL}/check?access_key=${process.env.REACT_APP_IP_STACK_ACCESS_KEY}`,
         {
           throws: {
             message: 'Forbidden'

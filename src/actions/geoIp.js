@@ -28,7 +28,7 @@ export const fetchGeoIp = () => {
     try {
       let json;
       if (process.env.NODE_ENV !== 'development') {
-        const response = await fetch('https://freegeoip.net/json/');
+        const response = await fetch(`${process.env.REACT_APP_IP_STACK_BASE_URL}/check?access_key=${process.env.REACT_APP_IP_STACK_ACCESS_KEY}`);
         json = await response.json();
       } else {
         json = {
