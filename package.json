@@ -23,7 +23,7 @@
     "flow-bin": "^0.80.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
-    "react-dom": "^16.4.2",
+    "react-dom": "^16.5.0",
     "react-redux": "^5.0.7",
     "react-scripts": "^1.1.5",
     "react-speedy-reader": "^1.0.15",
