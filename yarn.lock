@@ -40,9 +40,9 @@
   version "1.20.3"
   resolved "https://registry.yarnpkg.com/@types/expect/-/expect-1.20.3.tgz#a99d059ace4bd051332faf03f5b4b4266149a501"
 
-"@types/fetch-mock@^6.0.3":
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/@types/fetch-mock/-/fetch-mock-6.0.3.tgz#54ba90776293e728089bf53ba53e3c69f1c80655"
+"@types/fetch-mock@^6.0.4":
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/@types/fetch-mock/-/fetch-mock-6.0.4.tgz#fbe20ab0cc151fe67b2e1b71e7ef29a986a90f1f"
 
 "@types/jest@^23.3.2":
   version "23.3.2"
