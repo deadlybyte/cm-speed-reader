@@ -60,5 +60,10 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "peerDependencies": {
+    "ajv": "^6.5.4",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.4"
+  }
 }
