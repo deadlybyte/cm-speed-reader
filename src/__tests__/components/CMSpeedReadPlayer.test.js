@@ -89,7 +89,8 @@ describe('CMSpeedReadPlayer', () => {
     let playMock;
 
     beforeEach(() => {
-      playMock = jest.spyOn(Audio.prototype, 'play');
+      playMock = jest.spyOn(Audio.prototype, 'play')
+        .mockImplementation(() => {});
     });
 
     afterEach(() => {
