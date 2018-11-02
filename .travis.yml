@@ -5,7 +5,7 @@ node_js:
   - "7"
 install:
   - yarn install
-  - yarn install -g codecov
+  - yarn global codecov
 cache:
   directories:
     - "node_modules"
