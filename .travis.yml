@@ -4,16 +4,16 @@ node_js:
   - "8"
   - "7"
 install:
-  - npm install
-  - npm install -g codecov
+  - yarn install
+  - yarn install -g codecov
 cache:
   directories:
     - "node_modules"
 script:
-  - npm test -- --coverage
+  - yarn test -- --coverage
 after_success:
   - codecov
-  - npm run build
+  - yarn run build
 before_deploy:
   - cd build
 deploy:
