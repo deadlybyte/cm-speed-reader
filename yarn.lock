@@ -697,9 +697,9 @@
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
 
-"@fortawesome/fontawesome-common-types@^0.2.7":
-  version "0.2.7"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.7.tgz#fe76803922db0eb4393675199c2e0c3bad52629c"
+"@fortawesome/fontawesome-common-types@^0.2.15", "@fortawesome/fontawesome-common-types@^0.2.7":
+  version "0.2.15"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.15.tgz#16af950653083d1e3064061de9f8e5e3b579f688"
 
 "@fortawesome/fontawesome-svg-core@^1.2.7":
   version "1.2.7"
@@ -707,11 +707,11 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.2.7"
 
-"@fortawesome/free-solid-svg-icons@^5.4.2":
-  version "5.4.2"
-  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.4.2.tgz#185fdab8806d5726846719dd7f8a2756c7b4f7fe"
+"@fortawesome/free-solid-svg-icons@^5.7.2":
+  version "5.7.2"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.7.2.tgz#9ec2ed353d630092a8e19cc8aae2f716572963e5"
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.7"
+    "@fortawesome/fontawesome-common-types" "^0.2.15"
 
 "@fortawesome/react-fontawesome@^0.1.3":
   version "0.1.3"
