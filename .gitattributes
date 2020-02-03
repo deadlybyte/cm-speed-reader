@@ -1,0 +1,3 @@
+*.css   eol=lf
+*.js    eol=lf
+*.json  eol=lf
