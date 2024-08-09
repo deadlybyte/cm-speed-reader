@@ -15,13 +15,13 @@ class App extends Component {
   static defaultProps = {
     clientIp: undefined,
     fetchForecast: undefined
-  }
+  };
 
   static propTypes = {
     clientIp: PropTypes.string,
     fetchGeoIp: PropTypes.func.isRequired,
     fetchForecast: PropTypes.func
-  }
+  };
 
   async componentDidMount() {
     const { fetchGeoIp } = this.props;
@@ -32,7 +32,11 @@ class App extends Component {
   async componentWillReceiveProps(nextProps) {
     const { clientIp } = this.props;
 
-    if (nextProps.clientIp && clientIp !== nextProps.clientIp && nextProps.fetchForecast) {
+    if (
+      nextProps.clientIp &&
+      clientIp !== nextProps.clientIp &&
+      nextProps.fetchForecast
+    ) {
       await nextProps.fetchForecast();
     }
   }

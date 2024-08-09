@@ -1,6 +1,10 @@
 import 'cross-fetch/polyfill';
 
-import { FETCH_GEO_IP_ADDRESS_FAILURE, FETCH_GEO_IP_ADDRESS_REQUEST, FETCH_GEO_IP_ADDRESS_SUCCESS } from '../constants/geoIp';
+import {
+  FETCH_GEO_IP_ADDRESS_FAILURE,
+  FETCH_GEO_IP_ADDRESS_REQUEST,
+  FETCH_GEO_IP_ADDRESS_SUCCESS
+} from '../constants/geoIp';
 
 const fetchGeoIpRequest = () => {
   return {
@@ -8,14 +12,14 @@ const fetchGeoIpRequest = () => {
   };
 };
 
-const fetchGeoIpSuccess = (body) => {
+const fetchGeoIpSuccess = body => {
   return {
     type: FETCH_GEO_IP_ADDRESS_SUCCESS,
     body
   };
 };
 
-const fetchGeoIpFailure = (ex) => {
+const fetchGeoIpFailure = ex => {
   return {
     type: FETCH_GEO_IP_ADDRESS_FAILURE,
     ex
@@ -28,7 +32,9 @@ export const fetchGeoIp = () => {
     try {
       let json;
       if (process.env.NODE_ENV !== 'development') {
-        const response = await fetch(`${process.env.REACT_APP_IP_STACK_BASE_URL}/check?access_key=${process.env.REACT_APP_IP_STACK_ACCESS_KEY}`);
+        const response = await fetch(
+          `${process.env.REACT_APP_IP_STACK_BASE_URL}/check?access_key=${process.env.REACT_APP_IP_STACK_ACCESS_KEY}`
+        );
         json = await response.json();
       } else {
         json = {
@@ -47,7 +53,7 @@ export const fetchGeoIp = () => {
       }
       dispatch(fetchGeoIpSuccess(json));
     } catch (ex) {
-      dispatch(fetchGeoIpFailure(ex))
+      dispatch(fetchGeoIpFailure(ex));
     }
   };
 };

@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
 body {
-  background: #18141A url(../media/images/stadium-background-x1.jpeg) no-repeat center center fixed;
+  background: #18141a url(../media/images/stadium-background-x1.jpeg) no-repeat
+    center center fixed;
   background-position: 50% 50%;
   background-size: cover;
   font-family: 'Ubuntu', sans-serif;
