@@ -1,4 +1,8 @@
-import { FETCH_WEATHER_FORECAST_FAILURE, FETCH_WEATHER_FORECAST_REQUEST, FETCH_WEATHER_FORECAST_SUCCESS } from '../constants/weather';
+import {
+  FETCH_WEATHER_FORECAST_FAILURE,
+  FETCH_WEATHER_FORECAST_REQUEST,
+  FETCH_WEATHER_FORECAST_SUCCESS
+} from '../constants/weather';
 
 const initialState = {
   isFetching: false
@@ -20,10 +24,7 @@ const geoIp = (state = initialState, action) => {
       };
     }
     case FETCH_WEATHER_FORECAST_SUCCESS: {
-      const {
-        weather,
-        main
-      } = action.body;
+      const { weather, main } = action.body;
 
       const forecast = weather.map(w => w.description).join(', ');
 

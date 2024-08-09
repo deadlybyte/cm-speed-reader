@@ -12,7 +12,13 @@ import { faRedo } from '@fortawesome/free-solid-svg-icons';
 library.add(faPlayCircle, faPauseCircle, faVolumeUp, faVolumeOff, faRedo);
 
 class CommentaryControls extends Component {
-  static commentarySpeeds = ['Very slow', 'Slow', 'Normal', 'Fast', 'Very Fast'];
+  static commentarySpeeds = [
+    'Very slow',
+    'Slow',
+    'Normal',
+    'Fast',
+    'Very Fast'
+  ];
 
   static defaultProps = {
     isPlaying: true
@@ -25,8 +31,8 @@ class CommentaryControls extends Component {
     muteToggle: PropTypes.func.isRequired,
     playToggle: PropTypes.func.isRequired,
     resetCommentary: PropTypes.func.isRequired,
-    speed: PropTypes.number.isRequired,
-  }
+    speed: PropTypes.number.isRequired
+  };
 
   constructor(props) {
     super(props);
@@ -44,47 +50,56 @@ class CommentaryControls extends Component {
       <div className="container">
         <div className="row justify-content-sm-center no-gutters">
           <div className="col-sm-auto col-xs-12">
-            <button id="playToggle" type="button" className="CM-btn btn btn-primary btn-block" onClick={this.onPlayToggleClick} title={isPlaying ? "Pause" : "Play"}>
-              {
-                !isPlaying &&
-                <FontAwesomeIcon icon={faPlayCircle} fixedWidth />
-              }
-              {
-                isPlaying &&
-                <FontAwesomeIcon icon={faPauseCircle} fixedWidth />
-              }
+            <button
+              id="playToggle"
+              type="button"
+              className="CM-btn btn btn-primary btn-block"
+              onClick={this.onPlayToggleClick}
+              title={isPlaying ? 'Pause' : 'Play'}
+            >
+              {!isPlaying && <FontAwesomeIcon icon={faPlayCircle} fixedWidth />}
+              {isPlaying && <FontAwesomeIcon icon={faPauseCircle} fixedWidth />}
             </button>
           </div>
           <div className="col-sm-auto col-xs-12">
-            <select id="commentary-speed" defaultValue={speed} className="form-control" title={`Commentary speed - ${commentarySpeed}`} onChange={this.onSpeedChange}>
-              {
-                CommentaryControls.commentarySpeeds.map((commentarySpeed, index) => {
+            <select
+              id="commentary-speed"
+              defaultValue={speed}
+              className="form-control"
+              title={`Commentary speed - ${commentarySpeed}`}
+              onChange={this.onSpeedChange}
+            >
+              {CommentaryControls.commentarySpeeds.map(
+                (commentarySpeed, index) => {
                   return (
-                    <option
-                      key={index}
-                      value={index + 1}
-                    >
+                    <option key={index} value={index + 1}>
                       {commentarySpeed}
                     </option>
                   );
-                })
-              }
+                }
+              )}
             </select>
           </div>
           <div className="col-sm-auto col-xs-12">
-            <button id="muteToggle" type="button" className="CM-btn btn btn-primary btn-block" onClick={this.onMuteToggleClick} title={isMuted ? "Unmute" : "Mute"}>
-              {
-                isMuted &&
-                <FontAwesomeIcon icon={faVolumeUp} fixedWidth />
-              }
-              {
-                !isMuted &&
-                <FontAwesomeIcon icon={faVolumeOff} fixedWidth />
-              }
+            <button
+              id="muteToggle"
+              type="button"
+              className="CM-btn btn btn-primary btn-block"
+              onClick={this.onMuteToggleClick}
+              title={isMuted ? 'Unmute' : 'Mute'}
+            >
+              {isMuted && <FontAwesomeIcon icon={faVolumeUp} fixedWidth />}
+              {!isMuted && <FontAwesomeIcon icon={faVolumeOff} fixedWidth />}
             </button>
           </div>
           <div className="col-sm-auto col-xs-12">
-            <button id="reset" type="button" className="CM-btn btn btn-primary btn-block" onClick={this.onResetClick} title="Reset">
+            <button
+              id="reset"
+              type="button"
+              className="CM-btn btn btn-primary btn-block"
+              onClick={this.onResetClick}
+              title="Reset"
+            >
               <FontAwesomeIcon icon={faRedo} fixedWidth />
             </button>
           </div>

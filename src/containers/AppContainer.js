@@ -5,7 +5,7 @@ import App from '../components/App';
 import { fetchGeoIp } from '../actions/geoIp';
 import { fetchWeatherForecast } from '../actions/weather';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   const { geoIp } = state;
   const { ip, latitude, longitude } = geoIp;
 
@@ -16,11 +16,14 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({
-    fetchGeoIp,
-    fetchWeatherForecast
-  }, dispatch);
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators(
+    {
+      fetchGeoIp,
+      fetchWeatherForecast
+    },
+    dispatch
+  );
 };
 
 const mergeProps = (stateProps, dispatchProps) => {
@@ -30,7 +33,8 @@ const mergeProps = (stateProps, dispatchProps) => {
 
   if (clientIp) {
     const { latitude, longitude } = stateProps;
-    fetchForecast = () => dispatchProps.fetchWeatherForecast(longitude, latitude)
+    fetchForecast = () =>
+      dispatchProps.fetchWeatherForecast(longitude, latitude);
   }
 
   return {
@@ -40,6 +44,10 @@ const mergeProps = (stateProps, dispatchProps) => {
   };
 };
 
-const AppContainer = connect(mapStateToProps, mapDispatchToProps, mergeProps)(App);
+const AppContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+  mergeProps
+)(App);
 
 export default AppContainer;

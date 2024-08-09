@@ -1,4 +1,8 @@
-import { FETCH_GEO_IP_ADDRESS_FAILURE, FETCH_GEO_IP_ADDRESS_REQUEST, FETCH_GEO_IP_ADDRESS_SUCCESS } from '../constants/geoIp';
+import {
+  FETCH_GEO_IP_ADDRESS_FAILURE,
+  FETCH_GEO_IP_ADDRESS_REQUEST,
+  FETCH_GEO_IP_ADDRESS_SUCCESS
+} from '../constants/geoIp';
 
 const initialState = {
   isFetching: false
@@ -20,13 +24,7 @@ const geoIp = (state = initialState, action) => {
       };
     }
     case FETCH_GEO_IP_ADDRESS_SUCCESS: {
-      const {
-        city,
-        country_name,
-        ip,
-        latitude,
-        longitude
-      } = action.body;
+      const { city, country_name, ip, latitude, longitude } = action.body;
 
       return {
         city,

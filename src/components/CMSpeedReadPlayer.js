@@ -56,7 +56,7 @@ class CMSpeedReadPlayer extends Component {
       <div className="CM-block CM-commentary-block">
         <p className="App-intro">
           <SpeedyReader
-            ref={(speedyReader) => this.speedyReader = speedyReader}
+            ref={speedyReader => (this.speedyReader = speedyReader)}
             autoPlay
             inputText={process.env.REACT_APP_COMMENTARY_TEXT}
             speed={speed * 35}

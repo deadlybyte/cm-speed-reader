@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Venue from '../components/Venue';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   const { geoIp } = state;
   const { city, country_name } = geoIp;
   return {
